@@ -1,0 +1,53 @@
+{
+  "proyecto": "Epidemiología X60-X84 (Suicidios y Egresos Hospitalarios)",
+  "total_egresos_2023_2025": 12465,
+  "anios_procesados": [
+    "2023",
+    "2024",
+    "2025"
+  ],
+  "por_anio": [
+    {
+      "anio": "2023",
+      "pid_analizador": 7931,
+      "total_egresos": 3476,
+      "hombres": 1339,
+      "mujeres": 2136,
+      "edad_promedio": 27.17,
+      "dias_estancia_promedio": 3.38,
+      "top_3_causas_cie10": {
+        "X64": 944,
+        "X61": 711,
+        "X68": 352
+      }
+    },
+    {
+      "anio": "2024",
+      "pid_analizador": 7931,
+      "total_egresos": 4026,
+      "hombres": 1584,
+      "mujeres": 2442,
+      "edad_promedio": 26.59,
+      "dias_estancia_promedio": 3.89,
+      "top_3_causas_cie10": {
+        "X64": 984,
+        "X61": 814,
+        "X78": 469
+      }
+    },
+    {
+      "anio": "2025",
+      "pid_analizador": 7931,
+      "total_egresos": 4963,
+      "hombres": 1946,
+      "mujeres": 3016,
+      "edad_promedio": 26.23,
+      "dias_estancia_promedio": 4.05,
+      "top_3_causas_cie10": {
+        "X64": 1291,
+        "X61": 917,
+        "X78": 574
+      }
+    }
+  ]
+}

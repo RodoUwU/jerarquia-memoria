@@ -1,0 +1,60 @@
+{
+  "servicio": "5.4 Buffering (Productor-Consumidor y Overflow)",
+  "archivo_fuente": "mortality_suicidios_X60_X84.csv",
+  "escenarios": [
+    {
+      "escenario": "Equilibrado (sin desbordamiento)",
+      "capacidad_buffer_lotes": 5,
+      "tasa_envio_productor_seg": 0.015,
+      "tasa_recepcion_consumidor_seg": 0.015,
+      "politica_overflow": "backpressure",
+      "productor": {
+        "lotes_totales_leidos": 16,
+        "lotes_enviados_al_buffer": 16,
+        "eventos_overflow": 0,
+        "registros_producidos": 40000,
+        "ocupacion_maxima_buffer": 1,
+        "duracion_productor_seg": 0.364
+      },
+      "consumidor": {
+        "lotes_consumidos": 16,
+        "registros_consumidos": 40000,
+        "registros_con_observacion": 32392,
+        "tasa_mortalidad_promedio": 0.342,
+        "rango_anios": [
+          2000,
+          2022
+        ],
+        "duracion_consumidor_seg": 0.361,
+        "throughput_reg_por_seg": 110803.3
+      }
+    },
+    {
+      "escenario": "Desbordamiento controlado (Overflow)",
+      "capacidad_buffer_lotes": 5,
+      "tasa_envio_productor_seg": 0.015,
+      "tasa_recepcion_consumidor_seg": 0.08,
+      "politica_overflow": "descartar_y_registrar",
+      "productor": {
+        "lotes_totales_leidos": 16,
+        "lotes_enviados_al_buffer": 9,
+        "eventos_overflow": 7,
+        "registros_producidos": 40000,
+        "ocupacion_maxima_buffer": 5,
+        "duracion_productor_seg": 0.333
+      },
+      "consumidor": {
+        "lotes_consumidos": 9,
+        "registros_consumidos": 22500,
+        "registros_con_observacion": 20000,
+        "tasa_mortalidad_promedio": 0.1621,
+        "rango_anios": [
+          2000,
+          2022
+        ],
+        "duracion_consumidor_seg": 0.731,
+        "throughput_reg_por_seg": 30779.8
+      }
+    }
+  ]
+}

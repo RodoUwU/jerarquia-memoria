@@ -1,0 +1,22 @@
+PROMPTS PASO A PASO PARA CONSTRUIR EL PROYECTO
+Aplicación Integral de Gestión de la Jerarquía de Memoria (Datos X60-X84)
+========================================================================
+
+PROMPT 1 — Configuración del entorno y estructura base con Kax
+------------------------------------------------------------------------
+Necesito crear una aplicación en Python usando Visual Studio Code en Windows con WSL (Ubuntu) y la biblioteca institucional kax (IP 148.247.201.144, puertos 5061, 5071 y 1881 vía VPN). Explícame paso a paso como principiante qué extensiones y comandos ejecutar, y crea los archivos config.py y kax_adapter.py con carpetas files/ (para mis 4 CSV X60-X84) y store/, incluyendo un modo local de respaldo y limpieza automática con removeShm y removeShmFromCloud.
+
+
+PROMPT 2 — Servicio de Jerarquía de Memoria
+------------------------------------------------------------------------
+Crea el módulo servicios/jerarquia_memoria.py para procesar Egresos2023_X60_X84.csv, Egresos2024_X60_X84.csv y Egresos2025_X60_X84.csv pasando por 4 niveles: Caché L1 LRU de 8 bloques con localidad temporal y prefetching espacial por causa CIE-10 (CAUSAEXT), memoria compartida local (getRes), disco local y nube (loadAndUploadToCloud y download_from_cloud). Mide las latencias en milisegundos y la tasa de aciertos/fallos de L1.
+
+
+PROMPT 3 — Servicio de Memoria Compartida e IPC entre Procesos
+------------------------------------------------------------------------
+Implementa servicios/memoria_compartida.py con dos contextos usando multiprocessing y kax: en el primero, un proceso principal carga los CSV de egresos a memoria compartida y un proceso hijo lee desde RAM compartida para calcular egresos por año, sexo, edad promedio, días de estancia y top 3 de causas CIE-10, actualizando un estado compartido con Lock; en el segundo, usa segmentos manuales locales y en la nube (makeShm, putDataToShm, makeShmInCloud) y guarda el JSON final con saveFile.
+
+
+PROMPT 4 — Servicio de Buffering Productor-Consumidor e Integrador
+------------------------------------------------------------------------
+Desarrolla servicios/buffering_pipeline.py para leer mortality_suicidios_X60_X84.csv por lotes de 2,500 filas usando un buffer acotado de 5 lotes entre un proceso Productor y un Consumidor. Compara un escenario equilibrado (con backpressure) frente a un consumidor lento que provoque y registre eventos de overflow. Finalmente, integra los tres servicios en app.py con un menú interactivo y bandera --todo que genere un reporte JSON consolidado en store/.

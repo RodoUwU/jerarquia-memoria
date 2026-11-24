@@ -1,0 +1,267 @@
+{
+  "fecha_ejecucion": "2026-11-23T19:32:37",
+  "modo_kax_utilizado": "kax",
+  "tema_5_2_jerarquia_memoria": {
+    "servicio": "5.2 Jerarquía de Memoria",
+    "modo_kax": "kax",
+    "capacidad_l1_bloques": 8,
+    "l1_hits": 8,
+    "l1_misses": 3,
+    "l1_expulsiones_lru": 1,
+    "l1_tasa_aciertos_pct": 72.73,
+    "latencia_promedio_ms": {
+      "L1_cache_hit": 0.002,
+      "L2_shm_local": 0.261,
+      "L3_disco_local": 11.743,
+      "L4_cloud_subida": 7135.93,
+      "L4_cloud_descarga": 1155.614
+    },
+    "archivos": [
+      {
+        "archivo": "Egresos2023_X60_X84.csv",
+        "anio": "2023",
+        "hash_kax": "120844162a5286513f61cb0cfbc7ec01e198d0081bb36b8ea6665bd085bcdd82",
+        "tamano_kb": 617.8,
+        "registros": 3476,
+        "lat_disco_ms": 8.044,
+        "lat_shm_ms": 0.31,
+        "lat_cloud_subida_ms": 8782.686,
+        "lat_cloud_descarga_ms": 1282.902
+      },
+      {
+        "archivo": "Egresos2024_X60_X84.csv",
+        "anio": "2024",
+        "hash_kax": "bc1c7a4e0165d67a4450cd024d5cb8b268454f850b588674fcbf1ae04df065cf",
+        "tamano_kb": 719.2,
+        "registros": 4026,
+        "lat_disco_ms": 10.056,
+        "lat_shm_ms": 0.164,
+        "lat_cloud_subida_ms": 5206.952,
+        "lat_cloud_descarga_ms": 988.785
+      },
+      {
+        "archivo": "Egresos2025_X60_X84.csv",
+        "anio": "2025",
+        "hash_kax": "6a0f66ff86d5f636b5cee0a3fd567a4dd6390b0b58105302d43561b45ee8c1d0",
+        "tamano_kb": 887.1,
+        "registros": 4963,
+        "lat_disco_ms": 17.129,
+        "lat_shm_ms": 0.31,
+        "lat_cloud_subida_ms": 7418.152,
+        "lat_cloud_descarga_ms": 1195.155
+      }
+    ],
+    "consultas_localidad": [
+      {
+        "anio": "2023",
+        "codigo": "X64",
+        "egresos": 944,
+        "origen": "L1_MISS -> L2_SHM (+prefetch espacial)",
+        "lat_ms": 12.633
+      },
+      {
+        "anio": "2024",
+        "codigo": "X64",
+        "egresos": 984,
+        "origen": "L1_HIT",
+        "lat_ms": 0.005
+      },
+      {
+        "anio": "2025",
+        "codigo": "X64",
+        "egresos": 1291,
+        "origen": "L1_HIT",
+        "lat_ms": 0.002
+      },
+      {
+        "anio": "2023",
+        "codigo": "X64",
+        "egresos": 944,
+        "origen": "L1_HIT",
+        "lat_ms": 0.001
+      },
+      {
+        "anio": "2023",
+        "codigo": "X70",
+        "egresos": 234,
+        "origen": "L1_MISS -> L2_SHM (+prefetch espacial)",
+        "lat_ms": 1.372
+      },
+      {
+        "anio": "2024",
+        "codigo": "X70",
+        "egresos": 279,
+        "origen": "L1_HIT",
+        "lat_ms": 0.001
+      },
+      {
+        "anio": "2025",
+        "codigo": "X70",
+        "egresos": 367,
+        "origen": "L1_HIT",
+        "lat_ms": 0.001
+      },
+      {
+        "anio": "2023",
+        "codigo": "X78",
+        "egresos": 342,
+        "origen": "L1_MISS -> L2_SHM (+prefetch espacial)",
+        "lat_ms": 1.535
+      },
+      {
+        "anio": "2024",
+        "codigo": "X78",
+        "egresos": 469,
+        "origen": "L1_HIT",
+        "lat_ms": 0.001
+      },
+      {
+        "anio": "2025",
+        "codigo": "X78",
+        "egresos": 574,
+        "origen": "L1_HIT",
+        "lat_ms": 0.001
+      },
+      {
+        "anio": "2025",
+        "codigo": "X64",
+        "egresos": 1291,
+        "origen": "L1_HIT",
+        "lat_ms": 0.0
+      }
+    ]
+  },
+  "tema_5_3_memoria_compartida": {
+    "servicio": "5.3 Memoria Compartida e IPC",
+    "modo_kax": "kax",
+    "pid_principal": 7674,
+    "estado_compartido_ipc": {
+      "procesados": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "total_acumulado": 12465,
+      "ultimo_pid": 7931
+    },
+    "estadisticas_egresos": [
+      {
+        "anio": "2023",
+        "pid_analizador": 7931,
+        "total_egresos": 3476,
+        "hombres": 1339,
+        "mujeres": 2136,
+        "edad_promedio": 27.17,
+        "dias_estancia_promedio": 3.38,
+        "top_3_causas_cie10": {
+          "X64": 944,
+          "X61": 711,
+          "X68": 352
+        }
+      },
+      {
+        "anio": "2024",
+        "pid_analizador": 7931,
+        "total_egresos": 4026,
+        "hombres": 1584,
+        "mujeres": 2442,
+        "edad_promedio": 26.59,
+        "dias_estancia_promedio": 3.89,
+        "top_3_causas_cie10": {
+          "X64": 984,
+          "X61": 814,
+          "X78": 469
+        }
+      },
+      {
+        "anio": "2025",
+        "pid_analizador": 7931,
+        "total_egresos": 4963,
+        "hombres": 1946,
+        "mujeres": 3016,
+        "edad_promedio": 26.23,
+        "dias_estancia_promedio": 4.05,
+        "top_3_causas_cie10": {
+          "X64": 1291,
+          "X61": 917,
+          "X78": 574
+        }
+      }
+    ],
+    "hashes_kax_archivos": [
+      {
+        "archivo": "Egresos2023_X60_X84.csv",
+        "hash": "120844162a5286513f61cb0cfbc7ec01e198d0081bb36b8ea6665bd085bcdd82"
+      },
+      {
+        "archivo": "Egresos2024_X60_X84.csv",
+        "hash": "bc1c7a4e0165d67a4450cd024d5cb8b268454f850b588674fcbf1ae04df065cf"
+      },
+      {
+        "archivo": "Egresos2025_X60_X84.csv",
+        "hash": "6a0f66ff86d5f636b5cee0a3fd567a4dd6390b0b58105302d43561b45ee8c1d0"
+      }
+    ],
+    "archivo_guardado": "None"
+  },
+  "tema_5_4_buffering": {
+    "servicio": "5.4 Buffering (Productor-Consumidor y Overflow)",
+    "archivo_fuente": "mortality_suicidios_X60_X84.csv",
+    "escenarios": [
+      {
+        "escenario": "Equilibrado (sin desbordamiento)",
+        "capacidad_buffer_lotes": 5,
+        "tasa_envio_productor_seg": 0.015,
+        "tasa_recepcion_consumidor_seg": 0.015,
+        "politica_overflow": "backpressure",
+        "productor": {
+          "lotes_totales_leidos": 16,
+          "lotes_enviados_al_buffer": 16,
+          "eventos_overflow": 0,
+          "registros_producidos": 40000,
+          "ocupacion_maxima_buffer": 1,
+          "duracion_productor_seg": 0.364
+        },
+        "consumidor": {
+          "lotes_consumidos": 16,
+          "registros_consumidos": 40000,
+          "registros_con_observacion": 32392,
+          "tasa_mortalidad_promedio": 0.342,
+          "rango_anios": [
+            2000,
+            2022
+          ],
+          "duracion_consumidor_seg": 0.361,
+          "throughput_reg_por_seg": 110803.3
+        }
+      },
+      {
+        "escenario": "Desbordamiento controlado (Overflow)",
+        "capacidad_buffer_lotes": 5,
+        "tasa_envio_productor_seg": 0.015,
+        "tasa_recepcion_consumidor_seg": 0.08,
+        "politica_overflow": "descartar_y_registrar",
+        "productor": {
+          "lotes_totales_leidos": 16,
+          "lotes_enviados_al_buffer": 9,
+          "eventos_overflow": 7,
+          "registros_producidos": 40000,
+          "ocupacion_maxima_buffer": 5,
+          "duracion_productor_seg": 0.333
+        },
+        "consumidor": {
+          "lotes_consumidos": 9,
+          "registros_consumidos": 22500,
+          "registros_con_observacion": 20000,
+          "tasa_mortalidad_promedio": 0.1621,
+          "rango_anios": [
+            2000,
+            2022
+          ],
+          "duracion_consumidor_seg": 0.731,
+          "throughput_reg_por_seg": 30779.8
+        }
+      }
+    ]
+  }
+}
